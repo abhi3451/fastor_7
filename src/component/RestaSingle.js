@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Rest.css";
 import { BiSolidOffer, BiSolidShareAlt } from "react-icons/bi";
 import { MdArrowBack, MdArrowBackIos } from "react-icons/md";
+
 const RestaSingle = () => {
   const location = useLocation();
   const { id, RData } = location.state;
   const restaurant = RData.find((e) => e.restaurant_id === id);
   const navigate = useNavigate();
+
+  // Create a ref for the fastor logo image
+  const fastorLogoRef = useRef(null);
+
   if (!restaurant) {
     return <div>Restaurant not found</div>;
   }
@@ -29,8 +34,30 @@ const RestaSingle = () => {
     }
   };
 
+  // Function to handle drag-and-drop
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("text/plain", "fastor-logo");
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text/plain");
+    if (data === "fastor-logo") {
+      fastorLogoRef.current.style.left = e.clientX + "px";
+      fastorLogoRef.current.style.top = e.clientY + "px";
+    }
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="resta-single-container">
+    <div
+      className="resta-single-container"
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
       <div className="image-container">
         <div className="logo-overlay">
           <button
@@ -49,7 +76,14 @@ const RestaSingle = () => {
           />
         </div>
 
-        <img src="/fastor.png" className="fastor-logo" alt="Fastor Logo" />
+        <img
+          src="/fastor.png"
+          className="fastor-logo"
+          alt="Fastor Logo"
+          ref={fastorLogoRef}
+          draggable="true"
+          onDragStart={handleDragStart}
+        />
       </div>
       <button onClick={shareRestaurantImage} className="share-button">
         <BiSolidShareAlt />
