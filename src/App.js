@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import RestaSingle from "./component/RestaSingle";
+
+import RestaurantList from "./page/MainRestPage";
+import RegisterPage from "./page/RegisterPage";
+import OTP_page from "./page/OTP_page";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<RegisterPage />} />
+      <Route path="/otp" element={<OTP_page />} />
+      <Route path="/restaurant" element={<RestaurantList />} />
+      <Route path="/restaurant/:id" element={<RestaSingle />} />
+    </Routes>
   );
 }
 

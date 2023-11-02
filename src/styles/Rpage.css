@@ -1,0 +1,62 @@
+.Conter {
+  margin-top: 1rem;
+}
+
+.Card {
+  display: grid;
+  grid-template-columns: 7.5rem auto;
+  gap: 0.85rem;
+  height: 6.5rem;
+  margin-bottom: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.Card .img-container {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.Details-Container {
+  text-align: left;
+}
+
+.FlexBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.restaurant-address {
+  font-weight: 400;
+  color: grey;
+  font-size: 0.75rem;
+}
+
+.offer-info {
+  gap: 0.15rem;
+  margin-block: 0.35rem;
+  font-weight: 500;
+  color: #d3906f;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cost {
+  font-size: 0.75rem;
+  font-weight: 600;
+}

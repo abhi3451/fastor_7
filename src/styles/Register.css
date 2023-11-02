@@ -1,0 +1,80 @@
+.contain {
+  display: flex;
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+.head-card {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: white;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.err {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.para {
+  /* text-align: center; */
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.para2 {
+  /* text-align: center; */
+  font-size: 16px;
+  font-weight: 500;
+  color: #8391a1;
+}
+.phn {
+  display: flex;
+  justify-content: center;
+}
+.phn input {
+  padding: 15px;
+  width: 80%;
+  background-color: #f3f4f5;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background-color: rgba(255, 109, 106, 1);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 90%;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.Icon-Contain {
+  position: absolute;
+  z-index: 1;
+  color: rgb(36, 36, 36);
+  font-size: 1.5rem;
+  top: 1rem;
+  left: 1rem;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgb(152, 152, 152);
+}

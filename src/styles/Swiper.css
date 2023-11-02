@@ -1,0 +1,40 @@
+.Card {
+  display: flex;
+  justify-content: center;
+  height: 12rem;
+  width: 25rem;
+  margin-left: 0.25rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.SwiperCarousel {
+  margin-bottom: 1rem;
+}
+
+.SwiperSlide {
+  text-align: center;
+}
+
+.Card img {
+  height: 8rem;
+}
+
+.Card .info {
+  margin-bottom: 0.5rem;
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card .info .name {
+  font-size: 0.85rem;
+}
+
+.Card .info .location {
+  font-size: 0.75rem;
+  color: grey;
+  font-weight: 500;
+}

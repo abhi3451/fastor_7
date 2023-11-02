@@ -1,0 +1,101 @@
+.resta-single-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.Rating {
+  gap: "0.15rem";
+  margin-block: 0.5rem;
+
+  font-weight: "500";
+  color: "#D3906F";
+  font-size: 18px;
+
+  display: "flex";
+  align-items: center;
+}
+
+.IconContainter {
+  position: absolute;
+  z-index: 1;
+  color: rgb(36, 36, 36);
+  font-size: 1.5rem;
+  top: 1rem;
+  left: 1rem;
+  padding: 15px;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(198, 198, 198);
+  border-radius: 8px;
+  border: 0.5px solid white;
+}
+.restaurant-image {
+  width: 100vw;
+  height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.share-button {
+  position: absolute;
+  top: 10px;
+  left: 89%;
+  background: white;
+  color: #090909;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.DetailsContainer {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  top: 22rem;
+  width: 90vw;
+  border-radius: 2rem;
+  padding: 5vw;
+  text-align: left;
+}
+.restaurant-details {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.restaurant-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #444;
+}
+.fastor-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  width: 10%;
+  height: auto;
+  z-index: 1;
+}
+
+.logo-overlay {
+  position: relative;
+}
